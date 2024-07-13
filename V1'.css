@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    height: 100vh; /* Höhe auf die volle Höhe des Viewports setzen */
+    background-color: #091644;
+    background-image: url('background.PNG');
+    background-repeat: no-repeat;
+    background-size: 78% 100%;
+    background-position: right; /* Breite des Hintergrundbildes auf 50% des Containers setzen */
+
+     /* Höhe des Hintergrundbildes auf 100% des Containers setzen */
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zentriert den Inhalt vertikal */
+    align-items: flex-start; /* Richtet den Inhalt links aus */
+    background-color: #567;
+    color: white;
+    padding: 1rem;
+    width: 20%; /* Breite des Headers auf 50% des Containers setzen */
+    box-sizing: border-box; /* Berücksichtigt Padding und Border in der Breite */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 1;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 10px 0; /* Abstand zwischen den Links */
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/*nav ul li a:hover {
+    background-color: #555;
+    padding: 10px;
+}*/
+
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/*footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+} */
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Wechselt zur vertikalen Anordnung bei kleinen Bildschirmen */
+    }
+
+    header, .background-image {
+        width: 100%; /* Setzt die Breite auf 100% bei kleinen Bildschirmen */
+        height: 50vh; /* Setzt die Höhe auf 50% bei kleinen Bildschirmen */
+    }
+
+    nav ul li {
+        display: block;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
