@@ -1,3 +1,8 @@
+[build]
+command = "npm run build"
+base = "beaBall2024"
+publish = "beaBall2024"
+
 [[redirects]]
   from = "/5-Klasse"
   to = "/K5.html"
