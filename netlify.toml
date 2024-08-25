@@ -1,4 +1,3 @@
 [build]
-
-  publish = "public"          # Verzeichnis, das veröffentlicht werden soll
-  command = "npm run build"   # Build-Befehl
+publish = "public"          
+command = "npm run build"  
