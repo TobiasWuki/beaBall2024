@@ -1,4 +1,31 @@
-[build]
-#base = "TobiasWuki"
-publish = "public"
-command = "npm run build"
+[[redirects]]
+  from = "/5-Klasse"
+  to = "/K5.html"
+  status = 301
+  force = false
+
+  [[headers]]
+  for = "/*"  # Gilt für alle Pfade auf deiner Website
+  [headers.values]
+    X-Frame-Options = "DENY"  # Verhindert, dass deine Website in einem Frame angezeigt wird
+    X-Content-Type-Options = "nosniff"  # Verhindert das automatische Erkennen von MIME-Typen
+    X-XSS-Protection = "1; mode=block"  # Aktiviert den XSS-Schutz im Browser
+    Referrer-Policy = "no-referrer-when-downgrade"  # Schützt die Referrer-Informationen
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"  # Erzwingt HTTPS für die Website
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"  # Schützt vor XSS und Dateninjektionen
+    Permissions-Policy = "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), usb=()"  # Steuert die Nutzung bestimmter Web-APIs
+
+[[headers]]
+  for = "/images/*"  # Gilt nur für das Verzeichnis "images"
+  [headers.values]
+    Cache-Control = "max-age=86400"  # Caches Bilder für 24 Stunden
+
+[[headers]]
+  for = "/static/*"  # Gilt nur für das Verzeichnis "static"
+  [headers.values]
+    Cache-Control = "max-age=604800"  # Caches statische Dateien für 7 Tage
+
+[[headers]]
+  for = "/index.html"  # Gilt nur für die Datei "index.html"
+  [headers.values]
+    Cache-Control = "max-age=3600"  # Caches die Startseite für 1 Stunde
