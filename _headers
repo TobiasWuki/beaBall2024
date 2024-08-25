@@ -1,4 +1,4 @@
-# Allgemeine Sicherheitsheader für alle Anfragen
+
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
@@ -8,14 +8,13 @@
   Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'
   Permissions-Policy: accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(), usb=()
 
-# Cache-Control für index.html
-/index.html
+
+/index.html/*
   Cache-Control: max-age=3600
 
-# Cache-Control für Bilder
+
 /images/*
   Cache-Control: max-age=86400
 
-# Cache-Control für statische Dateien
 /static/*
   Cache-Control: max-age=604800
