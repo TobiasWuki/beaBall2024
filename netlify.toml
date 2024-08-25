@@ -1,0 +1,4 @@
+[build]
+#base = "TobiasWuki"
+publish = "public"
+command = "npm run build"
