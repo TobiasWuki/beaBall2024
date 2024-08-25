@@ -1,4 +1,4 @@
 [build]
-  base = "TobiasWuki/beaBall2024"                # Basisverzeichnis für den Build-Prozess
+  base = "TobiasWuki"                # Basisverzeichnis für den Build-Prozess
   publish = "public"          # Verzeichnis, das veröffentlicht werden soll
   command = "npm run build"   # Build-Befehl
